@@ -17,7 +17,7 @@ A Deep Learning model was built to analyze charitable contributions and determin
 
 Initally, Identification Numbers and Charity Names were dropped from the database, as that information was not necessary for the model.  All other categories were left in the dataset as the most informative data is yet to be determined. The category of focus for the model is the “IS_SUCCESSFUL” column as that is what the model will be predicting.
 
-Since the model runs on Integer values, the categorical data was converted into variables through use of the 'get_dummies' tool.  Application Type and Classification needed to be first transformed into bins before encoding to integers.  The number of bins for each was kept under 10.
+Since the model runs on Integer values, the categorical data was converted into variables through use of the `get_dummies` tool.  Application Type and Classification needed to be first transformed into bins before encoding to integers.  The number of bins for each was kept under 10.
 
 **Compile, Train, Evaluate**
 
