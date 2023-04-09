@@ -21,15 +21,12 @@ Since the model runs on Integer values, the categorical data was converted into 
 
 **Compile, Train, Evaluate**
 
-Now that the data was prepared, I split it into my training and testing sets and scaled the data to ensure the model weighed the variables appropriately.
+The data was scaled with StandardScaler, split into training and testing sets, fit to a keras sequential deep learning model with tensorflow.
 
-I designed a Deep Learning model with keras Sequential function from TensorFlow.  Since I was dealing with about 40 input features from the data, I set my Input and First Hidden Layer of the model with 80 neurons.  I created a Second Hidden Layer with 40 neurons.  I used the ReLU activation for the hidden layers and a Sigmoid activation to study probability for the output layer.
+For the initial run the following was used:
+two dense layers (80, 30 neurons each respectively) using the relu activation function.  The model measured loss with `binary_crossentropy`, and the `adam` optimizer was used.  The model was fit and trained for 100 epochs.
 
-For compiling the model, I measured loss with `binary_crossentropy` and used the `adam` optimizer.  I set callback checkpoints to save every 5 epochs when running the model.
-
-I fit and trained the model on 100 epochs.
-
-I saved the model as `AlphabetSoupCharity.h5`.
+The initial model was saved as:  `AlphabetSoupCharity.h5`.
 
 ## Results
 The initial evaluation of the model resulted in less than 73% accuracy, so I attempted several changes to the model to optimize the accuracy.
